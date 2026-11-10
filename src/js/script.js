@@ -160,3 +160,54 @@ if (
   showFeedback(0);
   startAutoplay();
 }
+
+
+// Pop-up de contato
+const contactModal = document.getElementById("contactModal");
+const openContact = document.getElementById("openContact");
+const closeContact = document.getElementById("closeContact");
+
+if (contactModal && openContact && closeContact) {
+    const modalContent = contactModal.querySelector(
+        ".contact-modal-content"
+    );
+
+    function openContactModal() {
+        contactModal.classList.add("active");
+        contactModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+
+        closeContact.focus();
+    }
+
+    function closeContactModal() {
+        contactModal.classList.remove("active");
+        contactModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+
+        openContact.focus();
+    }
+
+    // Abre o pop-up
+    openContact.addEventListener("click", openContactModal);
+
+    // Fecha pelo botão X
+    closeContact.addEventListener("click", closeContactModal);
+
+    // Fecha ao clicar no fundo escuro
+    contactModal.addEventListener("click", (event) => {
+        if (event.target === contactModal) {
+            closeContactModal();
+        }
+    });
+
+    // Fecha ao pressionar ESC
+    document.addEventListener("keydown", (event) => {
+        if (
+            event.key === "Escape" &&
+            contactModal.classList.contains("active")
+        ) {
+            closeContactModal();
+        }
+    });
+}
