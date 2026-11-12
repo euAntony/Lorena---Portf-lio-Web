@@ -453,18 +453,27 @@ ul {
   will-change: transform;
 }
 
+/* Depoimentos em prints */
 .feedback-card {
-  position: relative;
-  display: flex;
-  flex: 0 0 100%;
-  flex-direction: column;
-  box-sizing: border-box;
-  min-height: 310px;
-  padding: 35px;
-  border: 1px solid #e8dfd2;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, .04);
+    flex: 0 0 100%;
+    min-height: auto;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.feedback-card img {
+    display: block;
+    width: 100%;
+    max-width: 510px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 .feedback-stars {
@@ -850,11 +859,7 @@ body.modal-open {
 }
 
 
-
-
-/* ========================================
-   RODAPÉ MODERNO
-======================================== */
+/* Rodapé / Footer */
 
 .footer {
     position: relative;
@@ -870,7 +875,7 @@ body.modal-open {
 /* Conteúdo principal */
 
 .main-footer {
-    padding: 75px 0 55px;
+    padding: 40px 0 10px;
 }
 
 .footer-grid {
@@ -996,7 +1001,7 @@ body.modal-open {
 /* Frase de destaque */
 
 .footer-message {
-    padding: 28px 20px;
+    padding: 20px 10px;
     border-top: 1px solid rgba(197, 168, 128, 0.2);
     border-bottom: 1px solid rgba(197, 168, 128, 0.2);
     text-align: center;
@@ -1095,7 +1100,6 @@ body.modal-open {
         transition: none;
     }
 }
-
 
 /* Tablets */
 @media (max-width: 1000px) {
