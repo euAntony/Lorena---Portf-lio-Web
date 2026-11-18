@@ -1,0 +1,12 @@
+{
+  "name": "lorena-vieira-portfolio",
+  "version": "1.0.0",
+  "description": "Lorena Vieira Photography Portfolio",
+  "scripts": {
+    "dev": "echo 'Development server'",
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
